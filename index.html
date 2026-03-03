@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikPy.lol - TikTok View Booster</title>
+    <meta name="description" content="Boost your TikTok views instantly with our premium service">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/api.js" async="" defer=""></script>
+<script src="js/tag.min.js" data-zone="212900" async="" data-cfasync="false"></script></head>
+
+<!-- Ad Script (placed directly after <head> as requested) -->
+
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Online User Counter -->
+    <div class="online-counter">
+        <div class="online-dot"></div>
+        <span class="online-count" id="onlineCount">0</span>
+        <span class="online-text">online</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <a href="https://discord.gg/tEkcEYwVXE" target="_blank" class="discord-btn">
+                <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"></path>
+                </svg>
+                Join Discord
+            </a>
+            <img src="images/image.png" alt="TikPy Logo" class="hero-logo">
+        </section>
+
+        <!-- Main Card -->
+        <div class="card">
+            <form id="viewForm" class="form">
+                <div class="form-group">
+                    <label for="tiktokUrl" class="form-label">TikTok Video URL</label>
+                    <input type="text" id="tiktokUrl" class="form-input" placeholder="https://www.tiktok.com/@username/video/..." required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="viewCount" class="form-label">Number of Views</label>
+                    <input type="number" id="viewCount" class="form-input" placeholder="100" value="100" min="50" max="1500" required="">
+                    <div class="input-hint">Min: 50 • Max: 1500</div>
+                </div>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAACOfoO6NOtIp694N" data-theme="dark"></div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span class="btn-text">Send Views</span>
+                </button>
+            </form>
+
+            <div id="cooldownDisplay" class="cooldown-display" style="display: none;">
+                <div class="cooldown-icon">⏱️</div>
+                <div class="cooldown-text">
+                    <div class="cooldown-title">Cooldown Active</div>
+                    <div class="cooldown-timer" id="cooldownTimer">05:00</div>
+                    <div class="cooldown-subtitle">Please wait before sending more views</div>
+                </div>
+            </div>
+
+            <div id="statusContainer" class="status-container"></div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 TikPy.lol • Free TikTok View Booster</p>
+        </footer>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="loading-count">0</div>
+        </div>
+        <p class="loading-text">Sending views...</p>
+    </div>
+
+    <script src="js/script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d699f6989d6f5b9',t:'MTc3MjU1MTIwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+</body></html>
